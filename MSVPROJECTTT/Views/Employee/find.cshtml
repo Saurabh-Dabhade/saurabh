@@ -1,0 +1,17 @@
+@using emp;
+@{
+    ViewData["Title"] = "employee Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    @{
+        Employee list=ViewBag.find;
+            <div>
+                <h1>@list.eid</h1><br>
+                <h4>@list.ename</h4><br>
+                <h5>@list.edept</h5><br>
+            </div>
+    }
+</div>

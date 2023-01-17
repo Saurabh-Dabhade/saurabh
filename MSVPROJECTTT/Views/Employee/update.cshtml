@@ -1,0 +1,26 @@
+@using emp;
+@model Employee;
+
+<h2>update EMPLOYEE</h2>
+<hr/>
+@{
+    Employee e=ViewBag.update;
+}
+<form method="post" action="/Employee/updatee">
+  <div class="form-group">
+    <label for="eid">EMPID:</label>
+    <input type="text" id="eid" class="form-control" value=@e.eid asp-for="eid">
+  </div>
+  <div class="form-group">
+    <label for="ename">EMPNAME:</label>
+    <input type="text" id="ename" class="form-control" value=@e.ename asp-for="ename">
+  </div>
+  <div class="form-group">
+    <label for="edept">EDEPT:</label>
+    <input type="text" id="edept" class="form-control" value=@e.edept asp-for="edept">
+  </div>
+ <div class="form-group">
+   <button type="submit" class="btn btn-danger">Submit</button>
+  </div>
+ 
+</form>

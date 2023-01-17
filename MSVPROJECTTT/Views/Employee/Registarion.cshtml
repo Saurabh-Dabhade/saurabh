@@ -1,0 +1,24 @@
+@using emp;
+@model Employee;
+
+<h2>Insert new EMPLOYEE</h2>
+<hr/>
+<form method="post" action="/Employee/insert">
+  <div class="form-group">
+    <label for="eid">EMPID:</label>
+    <input type="text" id="eid" class="form-control" asp-for="eid">
+  </div>
+  <div class="form-group">
+    <label for="ename">EMPNAME:</label>
+    <input type="text" id="ename" class="form-control" asp-for="ename">
+  </div>
+  <div class="form-group">
+    <label for="edept">EDEPT:</label>
+    <input type="text" id="edept" class="form-control" asp-for="edept">
+  </div>
+ <div class="form-group">
+   <button type="submit" class="btn btn-danger">Submit</button>
+  </div>
+ 
+</form>
+

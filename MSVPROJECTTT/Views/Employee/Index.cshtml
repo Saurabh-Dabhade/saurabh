@@ -1,0 +1,27 @@
+﻿@using emp;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    @{
+        List<Employee> list=ViewBag.insert;
+            <table>
+                <tr>
+                    <th>empid</th><th>empname</th><th>dept</th>
+                </tr>
+           
+            @foreach(Employee v in list){
+                    <tr>
+                        <td>@v.eid</td><td>@v.ename</td><td>@v.edept</td>
+                        <td><button type="button" ><a href="/Employee/update/@v.eid">  Edit</a></button></td>
+                        <td><a href="/Employee/delete/@v.eid">DELETE</a> </td>
+                        <td><a href="/Employee/find/@v.eid">view</a> </td>
+                    </tr>
+            }
+             </table>
+            
+    }
+</div>
